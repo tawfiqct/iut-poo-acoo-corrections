@@ -10,4 +10,4 @@
   Exercice 4 -> **Cartes**
   
  ## Exemple d'interfaces
- Projet **Animaux**
+ Projet : **Animaux**
