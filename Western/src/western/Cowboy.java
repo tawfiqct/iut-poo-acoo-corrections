@@ -15,6 +15,14 @@ public class Cowboy extends Humain{
 		this.adjectif = adjectif;
 	}
 	
+	public int getPopularite(){
+		return this.popularite;
+	}
+	
+	public String getAdjectif(){
+		return this.adjectif;
+	}
+	
 	public void tirer(Brigand brigand){
 		//Le (adjectif) (nom) tire sur
 		//(nom du méchant) . PAN ! 
@@ -22,8 +30,8 @@ public class Cowboy extends Humain{
 		String txt = String.format("Le %s %s tire sur %s . PAN !", this.adjectif, this.getNom(), brigand.getNom());
 
 		System.out.println(txt);
-		 txt = String.format("%s - Prend ça, rascal !", this.getNom());
-		System.out.println(txt);
+		 txt = String.format("Prend ça, rascal !", this.getNom());
+		parler(txt);
 	}
 	
 	public void liberer(Dame dame){
@@ -32,7 +40,7 @@ public class Cowboy extends Humain{
 	
 	@Override
 	public void sePresenter() {
-		String txt = String.format("%s - Bonjour, je suis %s, ont dit que je suis %s, je suis %d populaire.",this.getNom(), this.getNom(), this.adjectif, this.popularite);
-		System.out.println(txt);
+		String txt = String.format("Bonjour, je suis %s, ont dit que je suis %s, je suis %d populaire.",this.getNom(), this.adjectif, this.popularite);
+		parler(txt);
 	}
 }

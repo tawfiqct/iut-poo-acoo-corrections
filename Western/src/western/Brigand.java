@@ -26,41 +26,49 @@ public class Brigand extends Humain{
 		this.recompense = recompense;
 	}
 	
+
 	public void kidnapper(Dame dame){
 		//Ah ah ! ( nom de la dame) , tu es mienne desormais !
-		String str = String.format("%s - Ah ah ! %s , tu es mienne desormais !", this.getNom(), dame.getNom());
-		System.out.println(str);
+		String str = String.format("Ah ah ! %s , tu es mienne desormais !", dame.getNom());
+		parler(str);
 		this.dames.add(dame);
 		dame.kidnapper();
-		System.out.println();
+
 	}
 	public void emprisonner(Cowboy cowboy){
 		
 		//Damned, je suis fait !
 		//(nom du cowboy) , tu m’as eu !
 		this.enPrison = true;
-		System.out.println(this.getNom() + " - Damned, je suis fait !");
-		System.out.println(this.getNom() + " - " + cowboy.getNom() + "Damned, tu m’as eu !");
+		parler("Damned, je suis fait !");
+		parler(cowboy.getNom() + "Damned, tu m’as eu !");
 	}
 	
 	public int montantCapture(){
 		return this.recompense;
 	}
+	
+	
 	@Override
-	public void quelEstTonNom() {
-		//(son nom) le (son look)
-		System.out.println(this.getNom() + " - " + this.getNom() + " le " + this.look);
+	public String getNom() {
+		
+		return super.getNom() + " le " + this.look;
 	}
+	
+	public void quelEstTonNom() {
+		this.parler(this.getNom());
+	}
+
 	@Override
 	public void sePresenter() {
 
-		String str = String.format("%s - Bonjour, je suis %s le %s et j’aime le %s.", this.getNom(), this.getNom(), this.look, this.getBoisson());
-		System.out.println(str);
+		String str = String.format("Bonjour, je suis %s et j’aime le %s.", this.getNom(),  this.getBoisson());
+		parler(str);
 		super.sePresenter();
-		str = String.format("%s - J’ai l’air %s et j’ai déjà kidnappé %d dames !", this.getNom(), this.look, this.dames.size());
-		System.out.println(str);
-		str = String.format("%s - Ma tête est mise à prix %d $ !",this.getNom(), this.recompense);
-		System.out.println(str);
+		str = String.format("J’ai l’air %s et j’ai déjà kidnappé %d dames !", this.look, this.dames.size());
+		parler(str);
+		str = String.format("Ma tête est mise à prix %d $ !",this.recompense);
+		parler(str);
 	}
 	
 	

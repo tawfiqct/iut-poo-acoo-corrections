@@ -20,19 +20,18 @@ public class Humain {
 	}
 	
 	public void sePresenter(){
-		String txt = String.format("%s - Bonjour, je suis %s, %s est ma boisson favorite.",this.nom, this.nom, this.boisson);
-		System.out.println(txt);
+		String txt = String.format("Bonjour, je suis %s, %s est ma boisson favorite.",this.nom, this.boisson);
+		this.parler(txt);
 	}
 	
 	public void boire(){
 		//Ah ! un bon verre de (sa boisson favorite) !
 		//GLOUPS !
 		
-		String txt = String.format("%s - Ah ! un bon verre de %s !",this.nom,  this.boisson);
-		System.out.println(txt);
+		String txt = String.format("Ah ! un bon verre de %s !",  this.boisson);
+		this.parler(txt);
 		
-		txt = String.format("%s - GLOUPS",this.nom);
-		System.out.println(txt);
+		this.parler("GLOUPS");
 		
 	}
 
@@ -43,10 +42,10 @@ public class Humain {
 		return this.boisson;
 	}
 	public void quelEstTonNom() {
-		System.out.println(this.getNom() + " - " + this.nom);
+		this.parler(this.nom);
 	}
 
-	public String quelEstTaBoisson() {
-		return this.boisson;
+	public void quelEstTaBoisson() {
+		this.parler("Ma boisson favorite est " + this.boisson);
 	}
 }
