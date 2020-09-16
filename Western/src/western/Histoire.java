@@ -19,5 +19,10 @@ public class Histoire {
 		cowboy.tirer(brigand);
 		
 		dame.quelEstTonNom();
+		
+		System.out.println();
+		Barman barman = new Barman("Moe");
+		barman.sePresenter();
+		barman.servir(john);
 	}
 }
