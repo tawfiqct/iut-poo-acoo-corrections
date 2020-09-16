@@ -15,6 +15,11 @@ public class Sherif extends Cowboy{
 	
 	ArrayList<Brigand> brigands;
 	
+	public Sherif(String nom) {
+		super(nom, "eau", "honnête");
+		this.brigands = new ArrayList<Brigand>();
+	}
+	
 	public Sherif(String nom, String boisson) {
 		super(nom, boisson, "honnête");
 		this.brigands = new ArrayList<Brigand>();

@@ -31,5 +31,11 @@ public class Histoire {
 		sherif.sePresenter();
 		sherif.rechercheBrigand(brigand);
 		sherif.coffrer(brigand);
+		
+		Cowboy clint = new Sherif("Clint");
+		//clint.coffrer(brigand); !!! non !!!
+		
+		
+
 	}
 }
