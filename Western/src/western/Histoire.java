@@ -35,7 +35,8 @@ public class Histoire {
 		Cowboy clint = new Sherif("Clint");
 		//clint.coffrer(brigand); !!! non !!!
 		
-		
+		Ripoux ripoux = new Ripoux("Thierry", 400);
+		cowboy.tirer(ripoux);
 
 	}
 }

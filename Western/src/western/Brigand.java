@@ -2,7 +2,7 @@ package western;
 
 import java.util.ArrayList;
 
-public class Brigand extends Humain{
+public class Brigand extends Humain implements HorsLaLoi{
 	private ArrayList<Dame> dames;
 	private String look = "méchant";
 	private int recompense = 100;
@@ -70,6 +70,7 @@ public class Brigand extends Humain{
 		str = String.format("Ma tête est mise à prix %d $ !",this.recompense);
 		parler(str);
 	}
+
 	
 	
 }

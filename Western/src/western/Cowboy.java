@@ -23,11 +23,11 @@ public class Cowboy extends Humain{
 		return this.adjectif;
 	}
 	
-	public void tirer(Brigand brigand){
+	public void tirer(HorsLaLoi horsLaLoi){
 		//Le (adjectif) (nom) tire sur
 		//(nom du méchant) . PAN ! 
 		//"Prend ça, rascal ! "
-		String txt = String.format("Le %s %s tire sur %s . PAN !", this.adjectif, this.getNom(), brigand.getNom());
+		String txt = String.format("Le %s %s tire sur %s . PAN !", this.adjectif, this.getNom(), horsLaLoi.getNom());
 
 		System.out.println(txt);
 		 txt = String.format("Prend ça, rascal !", this.getNom());

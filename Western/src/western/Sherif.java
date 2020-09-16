@@ -2,7 +2,7 @@ package western;
 
 import java.util.ArrayList;
 
-public class Sherif extends Cowboy{
+public class Sherif extends Cowboy {
 
 
 //	On ajoute à notre histoire des shérifs. Un shérif est un cowboy qui peut coffrer des brigands
