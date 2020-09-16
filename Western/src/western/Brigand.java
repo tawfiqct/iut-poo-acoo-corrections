@@ -41,7 +41,7 @@ public class Brigand extends Humain{
 		//(nom du cowboy) , tu m’as eu !
 		this.enPrison = true;
 		parler("Damned, je suis fait !");
-		parler(cowboy.getNom() + "Damned, tu m’as eu !");
+		parler(cowboy.getNom() + ", tu m’as eu !");
 	}
 	
 	public int montantCapture(){

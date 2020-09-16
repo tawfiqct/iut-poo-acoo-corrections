@@ -24,5 +24,12 @@ public class Histoire {
 		Barman barman = new Barman("Moe");
 		barman.sePresenter();
 		barman.servir(john);
+		
+		System.out.println();
+		
+		Sherif sherif = new Sherif("Richard", "Vodka");
+		sherif.sePresenter();
+		sherif.rechercheBrigand(brigand);
+		sherif.coffrer(brigand);
 	}
 }

@@ -38,7 +38,7 @@ public class Sherif extends Cowboy{
 	@Override
 	public void sePresenter() {
 	
-		String txt = String.format("Bonjour, je suis %s, ont dit que je suis %s, je suis %d populaire et j'ai capturé %d brigands !",this.getNom(), this.getNom(), this.getAdjectif(), this.getPopularite() , this.brigands.size());
+		String txt = String.format("Bonjour, je suis %s, ont dit que je suis %s, je suis %d populaire et j'ai capturé %d brigands !",this.getNom(), this.getAdjectif(), this.getPopularite() , this.brigands.size());
 		this.parler(txt);
 	}
 	
