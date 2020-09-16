@@ -20,7 +20,9 @@ public class Principale {
 		Fichier essai = new Fichier("essai.sh", 80);
 		bin.ajouterElement(essai);
 		home.afficheContenu();
+		System.out.println();
 		home.afficheTaille();
+		System.out.println();
 		home.afficheFichier(500);
 	}
 }

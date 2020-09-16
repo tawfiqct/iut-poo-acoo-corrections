@@ -19,7 +19,7 @@ public class Dossier extends Element{
 		parent.elements.add(this);
 	}
 	
-	public void ajouterElement(Element e){
+	public void ajouterElement(	Element e){
 		elements.add(e);
 		if(e instanceof Dossier){
 			((Dossier) e).parent = this;
@@ -33,7 +33,7 @@ public class Dossier extends Element{
 //				(F)-rien.txt
 //				(F)-trombi.doc
 		
-		System.out.println(String.format("Contenu du dossier %s (dossier parent '%s'", this.getNom(), this.parent.getNom()));
+		System.out.println(String.format("Contenu du dossier %s (dossier parent '%s')", this.getNom(), this.parent.getNom()));
 		for (Element element : elements) {
 			
 			System.out.print((element instanceof Dossier) ? "(R)" : "(F)");
@@ -61,7 +61,21 @@ public class Dossier extends Element{
 	
 	
 	public void afficheFichier(int taille){
-//		Fichier(s) dont la taille est sup. a 500 :
-//		(F)-trombi.doc – 2400
+		//Fichier(s) dont la taille est sup. a 500 :
+		System.out.println("Fichier(s) dont la taille est sup. a " + taille +" :");
+		for (Element element : elements) {
+			if(element instanceof Fichier){
+				Fichier fichier = (Fichier)element;
+				if(fichier.getTaille() > 500){
+					//(F)-trombi.doc – 2400
+
+					System.out.println("(F) - " + fichier.getNom() +" - " + fichier.getTaille());
+				}
+			}
+		} 
 	}
+	
+	
+	
+	
 }
