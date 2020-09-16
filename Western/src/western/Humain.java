@@ -4,6 +4,11 @@ public class Humain {
 	private String nom;
 	private String boisson;
 
+	public Humain(String nom) {
+		this.nom = nom;
+		this.boisson = "eau";
+	}
+	
 	public Humain(String nom, String boisson) {
 		this.nom = nom;
 		this.boisson = boisson;
