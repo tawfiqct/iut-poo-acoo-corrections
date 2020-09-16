@@ -28,7 +28,7 @@ public class Brigand extends Humain{
 	
 	public void kidnapper(Dame dame){
 		//Ah ah ! ( nom de la dame) , tu es mienne desormais !
-		String str = String.format("Ah ah ! %s , tu es mienne desormais !", dame.quelEstTonNom());
+		String str = String.format("Ah ah ! %s , tu es mienne desormais !", dame.getNom());
 		System.out.println(str);
 		this.dames.add(dame);
 		dame.kidnapper();
@@ -40,10 +40,17 @@ public class Brigand extends Humain{
 		//(nom du cowboy) , tu m’as eu !
 		this.enPrison = true;
 		System.out.println("Damned, je suis fait !");
-		System.out.println(cowboy.quelEstTonNom() + "Damned, tu m’as eu !");
+		System.out.println(cowboy.getNom() + "Damned, tu m’as eu !");
 	}
 	
 	public int montantCapture(){
 		return this.recompense;
 	}
+	@Override
+	public void quelEstTonNom() {
+		//(son nom) le (son look)
+		System.out.println(this.getNom() + " le " + this.look);
+	}
+	
+	
 }

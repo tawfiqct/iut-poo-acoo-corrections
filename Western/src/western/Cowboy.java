@@ -19,7 +19,7 @@ public class Cowboy extends Humain{
 		//Le (adjectif) (nom) tire sur
 		//(nom du méchant) . PAN ! 
 		//"Prend ça, rascal ! "
-		String txt = String.format("Le %s %s tire sur %s . PAN ! \nPrend ça, rascal ! ", this.adjectif, this.quelEstTonNom(), brigand.quelEstTonNom());
+		String txt = String.format("Le %s %s tire sur %s . PAN ! \nPrend ça, rascal ! ", this.adjectif, this.getNom(), brigand.getNom());
 		System.out.println(txt);
 	}
 	

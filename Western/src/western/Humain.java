@@ -32,8 +32,11 @@ public class Humain {
 		System.out.println(txt);
 	}
 
-	public String quelEstTonNom() {
+	public String getNom(){
 		return this.nom;
+	}
+	public void quelEstTonNom() {
+		System.out.println(this.nom);
 	}
 
 	public String quelEstTaBoisson() {

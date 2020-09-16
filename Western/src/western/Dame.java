@@ -37,6 +37,11 @@ public class Dame extends Humain{
 		this.couleurRobe = couleur;
 		System.out.println("Regardez ma nouvelle robe "+ couleur+" !");
 	}
+	@Override
+	public void quelEstTonNom() {
+		
+		System.out.println("Miss "+ this.getNom());
+	}
 	
 
 }
