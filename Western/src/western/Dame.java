@@ -21,7 +21,7 @@ public class Dame extends Humain{
 	}
 	
 	public void hurler(){
-		System.out.println("IIIIHHHHHHHHHHIIIHHHHHHHHH");
+		System.out.println(this.getNom() + " - " + "IIIIHHHHHHHHHHIIIHHHHHHHHH");
 	}
 	public void kidnapper(){
 		this.hurler();
@@ -30,7 +30,7 @@ public class Dame extends Humain{
 
 	public void liberer(){
 		this.libre = true;
-		System.out.println("Merci !!!!");
+		System.out.println(this.getNom() + " - " + "Merci !!!!");
 	}
 	
 	public void changerRobe(String couleur){
@@ -40,7 +40,12 @@ public class Dame extends Humain{
 	@Override
 	public void quelEstTonNom() {
 		
-		System.out.println("Miss "+ this.getNom());
+		System.out.println(this.getNom() + " - " + "Miss "+ this.getNom());
+	}
+	@Override
+	public void sePresenter() {
+		String txt = String.format("%s - Bonjour, je suis %s, %s est ma boisson favorite, ma robe est %s.",this.getNom(), this.getNom(), this.getBoisson(), this.couleurRobe);
+		System.out.println(txt);
 	}
 	
 

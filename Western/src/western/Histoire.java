@@ -12,9 +12,10 @@ public class Histoire {
 		Cowboy cowboy = new Cowboy("Philip", "lait", "superbe");
 		
 		dame.sePresenter();
-		dame.quelEstTonNom();
-		brigand.quelEstTonNom();
+		brigand.sePresenter();
 		brigand.kidnapper(dame);
+		
+		cowboy.sePresenter();
 		cowboy.tirer(brigand);
 		
 		dame.quelEstTonNom();
